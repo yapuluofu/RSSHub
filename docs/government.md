@@ -28,7 +28,13 @@ pageClass: routes
 
 </Route>
 
-## 国家新闻出版广电总局
+## 国家税务总局
+
+### 最新文件
+
+<Route author="nczitzk" example="/gov/chinatax/latest" path="/gov/chinatax/latest"/>
+
+## 国家新闻出版广电总局（弃用）
 
 ### 游戏审批结果
 
@@ -49,11 +55,27 @@ pageClass: routes
 
 </Route>
 
+## 国家新闻出版署
+
+### 列表
+
+<Route author="y2361547758" example="/gov/nppa/317" path="/gov/nppa/:channel" :paramsDesc="['栏目名id']" radar="1" />
+
+### 详情
+
+<Route author="y2361547758" example="/gov/nppa/318/45948" path="/gov/nppa/:channel/:content" :paramsDesc="['栏目名id', '文章id']" radar="1" />
+
 ## 联合国
 
 ### 安理会否决了决议
 
 <Route author="HenryQW" example="/un/scveto" path="/un/scveto"/>
+
+## 日本国外務省
+
+### 記者会見
+
+<Route author="sgqy" example="/go.jp/mofa" path="/go.jp/mofa"/>
 
 ## 苏州市人民政府
 
@@ -114,6 +136,24 @@ pageClass: routes
 <Route author="nczitzk" example="/gov/caict/caictgd" path="/gov/caict/caictgd"/>
 
 ## 中国政府
+
+### 数据
+
+<Route author="nczitzk" example="/gov/shuju/shengzhu/baitiaorou" path="/gov/shuju/:caty/:item" :paramsDesc="['分类，“生猪”对应`shengzhu`，“价格”对应`jiage`', '项目，见表']">
+
+生猪分类可选项目：
+
+| 白条猪价格 | 生猪屠宰与活体交易 | 仔猪价格 | 生猪出场价与玉米价  | 生猪存栏信息和生猪疫情 |
+| ---------- | ------------------ | -------- | ------------------- | ---------------------- |
+| baitiaorou | huotijiaoyi        | zizhu    | chuchangjia_yumijia | cunlan_yiqing          |
+
+价格分类可选项目：
+
+| 商品价格 | 农产品价格  | 油价   |
+| -------- | ----------- | ------ |
+| shangpin | nongchanpin | youjia |
+
+</Route>
 
 ### 最新政策
 
@@ -381,6 +421,10 @@ pageClass: routes
 
 </Route>
 
+### 数据 - 最新发布
+
+<Route author="MisteryMonster" example="/gov/moa/sjzxfb" path="/gov/moa/sjzxfb"/>
+
 ## 中华人民共和国商务部
 
 ### 政务公开
@@ -416,6 +460,24 @@ pageClass: routes
 ### 政策发布
 
 <Route author="nczitzk" example="/gov/mohurd/policy" path="/gov/mohurd/policy"/>
+
+## 重庆市人民政府
+
+### 两江新区信息公开网
+
+#### 党务公开
+
+<Route author="nczitzk" example="/gov/chongqing/ljxq/dwgk" path="/gov/chongqing/ljxq/dwgk"/>
+
+#### 政务公开
+
+<Route author="nczitzk" example="/gov/chongqing/ljxq/zwgk/lzyj" path="/gov/chongqing/ljxq/zwgk/:caty" :paramsDesc="['分类名']">
+
+| 履职依据 | 公示公告 |
+| -------- | -------- |
+| lzyj     | gsgg     |
+
+</Route>
 
 ## 中央纪委国家监委
 
